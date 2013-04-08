@@ -1,0 +1,172 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F64049A-EE5D-4410-97A2-4B4B677F506D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Csvy.Plugin</RootNamespace>
+    <AssemblyName>Csvy</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Csvy.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\release\Csvy.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IniFiles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Launchy#API, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LumenWorks.Framework.IO, Version=3.7.2.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\ActionHelper.cs" />
+    <Compile Include="Helpers\CsvHelper.cs" />
+    <Compile Include="Helpers\FullPathHelper.cs" />
+    <Compile Include="Referential\ActionInstance.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Referential\CsvHandler.cs" />
+    <Compile Include="Helpers\SearchHelper.cs" />
+    <Compile Include="Helpers\SerializationHelper.cs" />
+    <Compile Include="Referential\ReferentialManager.cs" />
+    <Compile Include="UI\ActionDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ActionDesigner.designer.cs">
+      <DependentUpon>ActionDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReferentialDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReferentialDesigner.Designer.cs">
+      <DependentUpon>ReferentialDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OptionsWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\OptionsWidget.Designer.cs">
+      <DependentUpon>OptionsWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ExpressionDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ExpressionDesigner.Designer.cs">
+      <DependentUpon>ExpressionDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Csvy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\ActionDesigner.resx">
+      <DependentUpon>ActionDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReferentialDesigner.resx">
+      <DependentUpon>ReferentialDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OptionsWidget.resx">
+      <DependentUpon>OptionsWidget.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExpressionDesigner.resx">
+      <DependentUpon>ExpressionDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horny_bird_small.png" />
+    <None Include="Resources\rdp.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\001_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\001_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\001_45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\001_26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\001_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\Csvy.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Includes\IniFiles.dll" />
+    <Content Include="Includes\Launchy#API.dll" />
+    <Content Include="Includes\LumenWorks.Framework.IO.dll" />
+    <Content Include="Resources\icons\001_05_bw.png" />
+    <Content Include="Resources\icons\001_25.png" />
+    <Content Include="Resources\icons\001_25_bw.png" />
+    <Content Include="Resources\icons\001_26_bw.png" />
+    <Content Include="Resources\icons\001_27.png" />
+    <Content Include="Resources\icons\001_27_bw.png" />
+    <Content Include="Resources\icons\001_28_bw.png" />
+    <Content Include="Resources\icons\001_45_bw.png" />
+    <Content Include="Resources\icons\copy.png" />
+    <Content Include="Resources\icons\copy_bw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Csvy.Action.Interface\Csvy.Action.Interface.csproj">
+      <Project>{61F03177-9510-4E28-9423-40DAD4601D7F}</Project>
+      <Name>Csvy.Action.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>taskkill /F /IM Launchy.exe
+xcopy $(TargetDir) C:\HOMEWARE\Launchy-dev\plugins /S
+start C:\HOMEWARE\Launchy-dev\Launchy.exe /show</PostBuildEvent>
+  </PropertyGroup>
+</Project>
