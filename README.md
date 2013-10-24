@@ -1,7 +1,7 @@
 ===A Launchy# plugin to access CSV files directly in Launchy===
 
 Requirements:
- * Launchy# (http://launchysharp.sourceforge.net/)
+ * Launchy# (https://github.com/kshahar/launchysharp)
 
 Uses:
  * A Fast CSV Reader (http://www.codeproject.com/Articles/9258/A-Fast-CSV-Reader)
