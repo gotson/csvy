@@ -7,9 +7,6 @@ Uses:
  * A Fast CSV Reader (http://www.codeproject.com/Articles/9258/A-Fast-CSV-Reader)
  * C# IniFiles (https://github.com/gotson/c-sharp-inifiles)
 
-Binaries:
-http://aves.free.fr/github/csvy/
-
 *You can also code your own actions !*
 Just implement the *Csvy.Action.Interface* and drop the DLL in the *plugin* folder.
 
